@@ -22,5 +22,5 @@ Often, a use does not want to see every little change, so probably the hardest s
 
 ## Design Ideas:
 * Have to be able to pull things out of a webpage given a url and be able to store it into a file
-* Open up that file that was stored, and be able to compare it with a previous existing instance of said file
-* Send findings through an email
+* Open up that file that was stored, and compare it with the new contents pulled from the web
+* Send findings through an email if there's a change of contents (newly pulled vs. stored)
