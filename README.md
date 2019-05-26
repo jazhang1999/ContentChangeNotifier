@@ -19,3 +19,8 @@ Often, a use does not want to see every little change, so probably the hardest s
 * Using Linux (Most likely some form of Ubuntu) terminal
 * Using an editor, not an IDE (probably either Vim, Emacs, or Atom)
 * Either Java, Python, or C (Most likely either Python or Java)
+
+## Design Ideas:
+* Have to be able to pull things out of a webpage given a url and be able to store it into a file
+* Open up that file that was stored, and be able to compare it with a previous existing instance of said file
+* Send findings through an email
