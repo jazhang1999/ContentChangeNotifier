@@ -1,4 +1,4 @@
-# SummerProject
+# ContentChangeNotifier
 Idea: Check any webpage for when it is updated, and be able to pull information off said webpage, all through a terminal without having to search on the web to get to that webpage
 
 ## Phase 1: Check for updates
