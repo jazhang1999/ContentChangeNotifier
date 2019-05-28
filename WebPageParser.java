@@ -1,15 +1,19 @@
-/* This code is designed to go into a designated website (timeanddate.com) and pull temperatures
- * of a given city off of the website, displaying them as output. This code is a modified version
- * of our CMSC132 lab, utilizing information from I/O Streams. It was later slightly modified and 
- * transported to be used as part of a linux terminal
- */
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
 import javax.swing.JOptionPane;
+
+/** This program pulls information from a selected site (timeanddate.com), allowing the user to 
+ * pick a selected city and see the temperature of said city. The program does this by
+ * utilizing input / output streams, and much of the code has been lifted from examples
+ * viewed in 132 classes towards the end of the semester 
+ *
+ * @author Nicholas Zhang
+ * @version 1.0
+ * @since 2019-05-28
+ */
 
 public class WebPageParser {
 
