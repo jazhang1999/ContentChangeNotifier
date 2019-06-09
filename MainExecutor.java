@@ -101,10 +101,15 @@ public class MainExecutor extends JPanel
 					display.setText(message);
 
 					// Save to a JSON file before sending
-					WriteRecord.record(message, searchTerm);
-
-					EmailSender.sendMessage(username, password, recipient, message);
-					display.append("\n Email notification has been sent to: " + recipient);
+					if(WriteRecord.record(message, searchTerm))
+					{
+						EmailSender.sendMessage(username, password, recipient, message);
+						display.append("\n Email notification has been sent to: " + recipient);
+					}
+					else
+					{
+						display.append("\n Email notification has not been sent, not change in update dates");
+					}
 				}
 				//catch (IOException g)
 				catch (Exception g)

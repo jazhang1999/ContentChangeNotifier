@@ -15,8 +15,10 @@ public class WriteRecord
 {
 	@SuppressWarnings("unchecked")
 
-	//Static method that writes the updated information to the script
-	static void record(String message, String website)
+	//Static method that writes the updated information to the script, if and only if there is 
+	//a change in the updates of the passed in website. If not, return false and do not
+	//overwrite (no changes made)
+	static boolean record(String message, String website)
 	{
 		// JSON array that will hold all of the objects (both old and new)
 		JSONArray updatedList = new JSONArray();
@@ -32,11 +34,27 @@ public class WriteRecord
 
 			//All of the old objects from the previous recordData.json
 			JSONArray recordList = (JSONArray) obj;
-			
-			JSONObject updateDetails = (JSONObject) recordList.get(0);
-			updateDetails.put(website, message);
 
-			updatedList.add(updateDetails);
+			JSONObject updateDetails = new JSONObject((JSONObject) recordList.get(0));
+
+			//Checks to see if the update dates (formatted the same) are not the same
+			//-will only update if they are
+			if (!message.equals(updateDetails.get(website)))
+			{
+				updateDetails.put(website, message);
+				updatedList.add(updateDetails);
+				//Write JSON file - overwrites it as well
+				try (FileWriter file = new FileWriter("recordData.json"))
+				{
+					file.write(updatedList.toJSONString());
+					file.flush();
+					return true;
+				}
+				catch (IOException e)
+				{
+					e.printStackTrace();
+				}
+			}
 		} 
 		catch (FileNotFoundException e) 
 		{
@@ -50,17 +68,7 @@ public class WriteRecord
 		{
 			e.printStackTrace();
 		}
-		
-		//Write JSON file - overwrites it as well
-		try (FileWriter file = new FileWriter("recordData.json")) 
-		{
-			file.write(updatedList.toJSONString());
-			file.flush();
-		} 
-		catch (IOException e) 
-		{
-			e.printStackTrace();
-		}
+		return false;
 	}
 }
 
