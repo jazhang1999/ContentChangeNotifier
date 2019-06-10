@@ -32,6 +32,10 @@ Phase 1 is mostly completed, with some additional features:
 
 # Organization Notes (6/10/19)
 There are a couple things to remember when modifying or using this code:
-* The main programs are MainExecutor.java, PageParser.java, EmailSender.java, 
+* The main programs are MainExecutor.java, PageParser.java, EmailSender.java, and WriteRecord.java
+* You will also need all the .jar files to run and an empty .json file to work (at least in the beginning)
+* To compile the program (in linux terminal): javac -cp \* __________ (Modified code)
+* To run the program (in linux terminal): java -cp .:\* MainExecutor
+
 
 
