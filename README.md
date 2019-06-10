@@ -24,3 +24,14 @@ Often, a use does not want to see every little change, so probably the hardest s
 * Have to be able to pull things out of a webpage given a url and be able to store it into a file
 * Open up that file that was stored, and compare it with the new contents pulled from the web
 * Send findings through an email if there's a change of contents (newly pulled vs. stored)
+
+# Updates (6/10/19)
+Phase 1 is mostly completed, with some additional features:
+* Will be able to pull 'last edited' dates from certain pages (official articles, etc.)
+* Will only send an email if there has been an actual change
+
+# Organization Notes (6/10/19)
+There are a couple things to remember when modifying or using this code:
+* The main programs are MainExecutor.java, PageParser.java, EmailSender.java, 
+
+
