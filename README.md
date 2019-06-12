@@ -31,6 +31,7 @@ There are a couple things to remember when modifying or using this code:
 * You will also need all the .jar files to run and an empty .json file to work (at least in the beginning)
 * To compile the program (in linux terminal): javac -cp \* __________ (Modified code)
 * To run the program (in linux terminal): java -cp .:\* MainExecutor
+* For more information, please see https://stackoverflow.com/questions/9395207/how-to-include-jar-files-with-java-file-and-compile-in-command-prompt
 
 # Program Organization
 As previously mentioned, there entirety of phase one can be run from the select main programs:
