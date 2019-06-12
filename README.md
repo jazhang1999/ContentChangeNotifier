@@ -39,7 +39,7 @@ As previously mentioned, there entirety of phase one can be run from the select 
 * WriteREcord.java - saves the last updated date in a .json file, and determines whether an email needs to be sent (only when there is a difference between the saved message and the new message that both point to the same URL)
 * EmailSender.java - sends the email to the user. Keep in mind that both the sender and the recipient must have their restrictions turned off on this account or else exceptions will be thrown
 
-#Auxilluary files
+Auxilluary files
 * All the .jar files included in ContentChangeNotifyer must be included when going to compile, hence the complicated javac command
 * There also needs to be an existing .json file named record.json (can be empty object [{}] or non-empty) - the WriteRecord.java static methods will use this file as a base to either modify or create new entries to be referenced in the future
 
