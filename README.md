@@ -44,7 +44,7 @@ Auxilluary files
 * All the .jar files included in ContentChangeNotifyer must be included when going to compile, hence the complicated javac command
 * There also needs to be an existing .json file named record.json (can be empty object [{}] or non-empty) - the WriteRecord.java static methods will use this file as a base to either modify or create new entries to be referenced in the future
 
-![](Design.gif)
+![](Design.GIF)
 
 
 
