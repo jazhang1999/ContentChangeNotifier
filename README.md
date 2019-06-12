@@ -15,11 +15,6 @@ Often, a use does not want to see every little change, so probably the hardest s
 * An email will be sent to the proper address detailing the findings / results of said program (most likely will be sent at 11:59 PM, and reset at 12:00 AM)
 * Either a mod page (video game) or a page with solid text (wiki or other text presentation)
 
-## Resources:
-* Using Linux (Most likely some form of Ubuntu) terminal
-* Using an editor, not an IDE (probably either Vim, Emacs, or Atom)
-* Either Java, Python, or C (Most likely either Python or Java)
-
 ## Design Ideas:
 * Have to be able to pull things out of a webpage given a url and be able to store it into a file
 * Open up that file that was stored, and compare it with the new contents pulled from the web
@@ -36,6 +31,17 @@ There are a couple things to remember when modifying or using this code:
 * You will also need all the .jar files to run and an empty .json file to work (at least in the beginning)
 * To compile the program (in linux terminal): javac -cp \* __________ (Modified code)
 * To run the program (in linux terminal): java -cp .:\* MainExecutor
+
+# Program Organization
+As previously mentioned, there entirety of phase one can be run from the select main programs:
+* MainExecutor.java - contains the main method that makes everything work
+* PageParser.java - takes a URL and find when it was last updated (limited - will only definitively for wikipedia articles)
+* WriteREcord.java - saves the last updated date in a .json file, and determines whether an email needs to be sent (only when there is a difference between the saved message and the new message that both point to the same URL)
+* EmailSender.java - sends the email to the user. Keep in mind that both the sender and the recipient must have their restrictions turned off on this account or else exceptions will be thrown
+
+#Auxilluary files
+* All the .jar files included in ContentChangeNotifyer must be included when going to compile, hence the complicated javac command
+* There also needs to be an existing .json file named record.json (can be empty object [{}] or non-empty) - the WriteRecord.java static methods will use this file as a base to either modify or create new entries to be referenced in the future
 
 
 
