@@ -20,7 +20,7 @@ There are a couple things to remember when modifying or using this code:
 * The main programs are MainExecutor.java, PageParser.java, EmailSender.java, and WriteRecord.java
 * You will also need all the .jar files to run 
 * There also needs to be an existing .json file named record.json (can be empty object [{}] or non-empty) - the WriteRecord.java static methods will use this file as a base to either modify or create new entries to be referenced in the future
-* To compile the program (in linux terminal): ```javac -cp \* MainExecutor.java PageParser.java EmailSender.java WriteRecord.java```
-* To run the program (in linux terminal): ```java -cp .:\* MainExecutor```
+* To compile the program (in linux): ```javac -cp \* MainExecutor.java PageParser.java EmailSender.java WriteRecord.java```
+* To run the program (in linux): ```java -cp .:\* MainExecutor```
 * For more information, please see https://stackoverflow.com/questions/9395207/how-to-include-jar-files-with-java-file-and-compile-in-command-prompt
 
